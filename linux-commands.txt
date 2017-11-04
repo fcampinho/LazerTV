@@ -1,0 +1,180 @@
+ssh lazertv@192.168.0.254
+ssh-keygen -R 192.168.0.254
+
+sudo reboot
+sudo poweroff
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt autoremove
+
+sudo parted
+resizepart 2 127865
+quit
+
+sudo resize2fs /dev/mmcblk0p2
+sudo reboot
+
+sudo apt-get install -y git
+sudo apt-get install -y nodejs
+sudo apt-get install -y build-essential
+sudo apt-get install -y npm
+sudo apt-get install -y postgresql postgresql-contrib
+
+sudo -i -u postgres
+createuser --interactive
+tv
+n
+n
+n
+psql
+\password postgres
+\password tv
+\q
+exit
+
+sudo pico /etc/postgresql/9.5/main/postgresql.conf
+listen_addresses = '*'
+password_encryption = on
+
+sudo pico /etc/postgresql/9.5/main/pg_hba.conf
+host all all 0.0.0.0/0 md5
+
+sudo /etc/init.d/postgresql restart
+
+sudo apt install -y nodejs-legacy
+cd /var
+sudo mkdir www
+sudo chown -R lazertv www
+cd www
+git clone https://fcampinho.visualstudio.com/DefaultCollection/LazerTV/_git/LazerTV-Local .
+cd public
+mkdir medias
+cd ..
+
+sudo npm install -g bower
+sudo npm install -g gulp
+sudo npm install
+bower install
+gulp
+
+#Mapear via Interface Gnome
+
+sudo apt-get install -y samba
+sudo smbpasswd -a lazertv
+Shr2016_08
+
+sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.bk
+sudo rm /etc/samba/smb.conf
+sudo pico /etc/samba/smb.conf
+
+#arquivo
+[global]
+   workgroup = WORKGROUP
+   server string = %h server (Samba, Ubuntu)
+   dns proxy = no
+   log file = /var/log/samba/log.%m
+   max log size = 1000
+   syslog = 0
+   panic action = /usr/share/samba/panic-action %d
+   server role = standalone server
+   passdb backend = tdbsam
+   obey pam restrictions = yes
+   unix password sync = yes
+   passwd program = /usr/bin/passwd %u
+   passwd chat = *Enter\snew\s*\spassword:* %n\n *Retype\snew\s*\spassword:* %n\n *password\supdated\ssuccess$
+   pam password change = yes
+   map to guest = bad user
+   usershare allow guests = yes
+
+[medias]
+   path = /var/www/public/medias
+   valid users = lazertv
+   writable = yes
+   read only = no
+#fim arquivo
+
+sudo service smbd restart
+testparm
+
+sudo npm install -g pm2
+pm2 startup systemd
+sudo su -c "env PATH=$PATH:/usr/bin pm2 startup systemd -u lazertv --hp /home/lazertv"
+pm2 start bin/www
+
+sudo chgrp -R www-data /var/www
+#sudo usermod -a -G www-data lazertv
+sudo chmod -R 2770 /var/www
+sudo chown -R lazertv /var/www
+
+sudo apt-get install nginx
+sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bk
+sudo rm /etc/nginx/sites-available/default
+sudo pico /etc/nginx/sites-available/default
+
+#arquivo
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root /var/www;
+    server_name _;
+
+    location ~ ^/(images/|javascripts/|fonts/|stylesheets/|medias/) {
+        root /var/www/public;
+
+        access_log off;
+        expires 30d;
+    }
+
+    location / {
+        proxy_pass http://localhost:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+#fim arquivo
+
+#git config user.email "fcampinho@hotmail.com"
+#git config user.name "fcampinho"
+#git commit -a -m "Permission"
+
+sudo systemctl restart nginx
+#sudo cat /var/log/nginx/error.log
+
+sudo apt-get install dnsmasq
+sudo cp /etc/dnsmasq.conf /etc/dnsmasq.conf.bk
+sudo rm /etc/dnsmasq.conf
+sudo pico /etc/dnsmasq.conf
+
+#arquivo
+domain-needed
+
+local=/lazertv.com.br/
+domain=lazertv.com.br
+server=8.8.8.8
+
+address=/lazertv.com.br/192.168.0.254
+address=/#/192.168.0.254 #Essa linha remove todo o acesso a internet do dispositivo, comentar caso deseje dar acesso a Internet
+dhcp-range=192.168.0.50,192.168.0.150,255.255.255.0,12h
+dhcp-option=option:router,192.168.0.1
+listen-address=127.0.0.1,192.168.0.254
+
+#fim arquivo
+
+sudo /etc/init.d/dnsmasq restart
+#sudo systemctl status dnsmasq
+
+sudo pico /lib/systemd/system/dnsmasq.service
+#Dentro de [Unit] colocar as linhas abaixo
+After=network-online.target
+Wants=network-online.target
+
+
+#Mikrotik
+#ip dns static
+#add name .* address=10.0.42.1
+

@@ -1,0 +1,132 @@
+insert into media (id, title, url, cover, banner, storyline, detail, created_at, classification, type, category_id, release, duration)
+values (16, 'Minha Noiva de Mentira',
+	'/medias/movie/minhanoivadementira.mp4',
+	'/medias/cover/cover_minhanoivadementira.png',
+	'/medias/banner/banner_minhanoivadementira.jpg',
+	'Jennifer (Melissa Joan Hart) acaba de perder todos os seus objetos pessoais quando conhece Vince (Joseph Lawrence). Apesar de uma certa antipatia inicial, ela faz uma proposta que pode resolver os problemas de ambos. Para ganhar dinheiro e presentes, eles começam os preparativos para um casamento falso. Com a farsa, eles esperam sair do aperto, mas os dois vão ganhar muito mais do que esperavam...',
+	'Data de lançamento 2009 (1h 26min)<br />Direção: Gil Junger<br />Elenco: Melissa Joan Hart, Joseph Lawrence, Burgess Jenkins mais<br />Gêneros Comédia , Romance<br />Nacionalidade Eua',
+	current_timestamp,
+	'12', 1, 5, 2009, '1h 26min')
+
+insert into media (id, title, url, cover, banner, storyline, detail, created_at, classification, type, category_id, release, duration)
+values (17, 'Dose Dupla',
+	'/medias/movie/dosedupla.mp4',
+	'/medias/cover/cover_dosedupla.png',
+	'/medias/banner/banner_dosedupla.png',
+	'<strong>Não recomendado para menores de 16 anos</strong>Robert Bobby Trench (Denzel Washington) e Michael Stig Stigman (Mark Wahlberg) trabalham juntos há dez meses e tentam fazer negócios com Papi Greco (Edward James Olmos), um poderoso traficante mexicano que atua nos Estados Unidos. Como Papi está desconfiado da dupla, se recusa a negociar com eles. A saída então é roubar um banco que, supostamente, receberia o faturamento deixado toda semana por capangas do traficante.',
+	'Data de lançamento 13 de setembro de 2013 (1h 49min)<br />Direção: Baltasar Kormákur<br />Elenco: Denzel Washington, Mark Wahlberg, Paula Patton mais<br />Gêneros Ação, Comédia<br />Nacionalidade Eua',
+	current_timestamp,
+	'16', 1, 5, 2013, '1h 49min')
+
+insert into media (id, title, url, cover, banner, storyline, detail, created_at, classification, type, category_id, release, duration)
+    values (18, 'O vidente',
+    	'/medias/movie/ovidente.mp4',
+    	'/medias/cover/cover_ovidente.png',
+    	'/medias/banner/banner_ovidente.png',
+    	'Cris Johnson (Nicolas Cage) é um mágico de Las Vegas que possui o dom de prever alguns minutos do futuro próximo.  A agente do FBI Callie Ferris (Julianne Moore) o procura para que a ajude a impedir um ataque terrorista em Los Angeles. Porém à medida que o tempo passa a ameaça de uma explosão nuclear torna-se mais real, fazendo com que Cris seja a peça-chave para impedir que uma tragédia ocorra.',
+    	'Data de lançamento 28 de setembro de 2007 (1h 36min)<br />Direção: Lee Tamahori<br />Elenco: Nicolas Cage, Julianne Moore, Jessica Biel<br />Gêneros Ação, Ficção científica, Suspense<br />Nacionalidade Eua',
+    	current_timestamp,
+    	'12', 1, 5, 2007, '1h 36min')
+
+insert into media (id, title, url, cover, banner, storyline, detail, created_at, classification, type, category_id, release, duration)
+values (19, 'Sem Limites',
+	'/medias/movie/semlimites.mp4',
+	'/medias/cover/cover_semlimites.png',
+	'/medias/banner/banner_semlimites.png',
+	'Eddie Morra (Bradley Cooper) sofre de bloqueio de escritor. Um dia, ele reencontra na rua seu ex-cunhado, Vernon (Johnny Whitworth), que lhe apresenta um remédio revolucionário que permite o uso de 100% da capacidade cerebral. O efeito é imediato em Eddie, pois ele passa a se lembrar de tudo que já leu, ouviu ou viu em sua vida. Seu desempenho chama a atenção do empresário Carl Van Loon (Robert De Niro), que resolve contar com sua ajuda para fechar um dos maiores negócios da história.',
+	'Data de lançamento 25 de março de 2011 (1h 45min)<br />Direção: Neil Burger<br />Elenco: Bradley Cooper, Robert De Niro, Abbie Cornish<br />Gênero Suspense<br />Nacionalidade Eua',
+	current_timestamp,
+	'12', 1, 5, 2011, '1h 45min')
+
+
+insert into media (id, title, url, cover, banner, storyline, detail, created_at, classification, type, category_id, release, duration)
+values (20, 'Meu Nome é Ninguem',
+	'/medias/movie/meunomeeninguem.mp4',
+	'/medias/cover/cover_meunomeeninguem.png',
+	'/medias/banner/banner_meunomeeninguem.png',
+	'O jovem e ambicioso pistoleiro conhecido como Ninguém (Terence Hill, de Call me Trinity), está de olho em ídolo, o Rei do Gatilho, conhecido como Jack Beauregard (Henry Fonda, de Era uma Vez no Oeste) que já pensa em se aposentar. Decidido a evitar que seu herói deixe o cano do revólver esfriar, ele lhe prepara uma emboscada com os piores bandidos do Oeste, apenas para vê-lo em ação pela última vez, o que resulta em um desfecho memorável, que se tornou um dos mais famosos em comédias de ação.',
+	'Data de lançamento  1973 (1h 12min)<br />Direção: Torino Valerii<br />Elenco: Terence Hill, Henry Fonda<br />Gênero Comédia, Faroeste<br />Nacionalidade Itália',
+	current_timestamp,
+	'12', 1, 5, 1973, '1h 12min')
+
+insert into media (id, title, url, cover, banner, storyline, detail, created_at, classification, type, category_id, release, duration)
+values (21, 'Pica Pau',
+	'/medias/movie/picapau.mp4',
+	'/medias/cover/cover_picapau.png',
+	'/medias/banner/banner_picapau.png',
+	'Reviva as hilárias e loucas aventuras de Pica Pau, o pássaro excêntrico mais adorado do mundo, do renomado cartunista Walter Lantz. Junte-se a Pica Pau, Andy Panda, Picolino, Zeca Urubu e Leôncio em horas de diversão e muito riso.',
+	'Data de lançamento 1957  (1h 20min)<br />Direção: Walter Lantz<br />Elenco: Pica-Pau e sua turma<br />Gênero Infantil, Comédia<br />Nacionalidade Eua',
+	current_timestamp,
+	'Livre', 1, 5, 1957, '1h 20min')
+
+insert into media (id, title, url, cover, banner, storyline, detail, created_at, classification, type, category_id, release, duration)
+values (22, 'Missão quase Impossivel',
+	'/medias/movie/missaoquaseimpossivel.mp4',
+	'/medias/cover/cover_missaoquaseimpossivel.png',
+	'/medias/banner/banner_missaoquaseimpossivel.png',
+	'Bob Ho (Jackie Chan) é um agente secreto da CIA, que decide largar o serviço para poder se dedicar mais a Gilliam (Amber Valetta), sua namorada. Bob deseja se casar com Gilliam mas antes tem uma missão complicada: conquistar Farren (Madeline Carroll), Ian (Will Shadley) e Nora (Alina Foley), os filhos dela.',
+	'Data de lançamento 7 de maio de 2010 (1h 34min)<br />Direção: Brian Levant<br />Elenco: Jackie Chan, Amber Valletta, Madeline Carroll mais<br />Gêneros Ação, Comédia<br />Nacionalidade Eua',
+	current_timestamp,
+	'12', 1, 5, 2010, '1h 34min')
+
+insert into serie (id, title, cover, storyline, detail, category_id, created_at, release, serie_id)
+values (3, 'CHAVES',
+	'/medias/cover/cover_chaves.png',
+	'Há década Chaves e seus amigos: Chiquinha, Quico, Seu madruga e toda a turma da vizinhança, aprontam as maiores confusões e encantam crianças e adultos em histórias cheias de alegria, pureza e muita diversão para toda a família!',
+	'Há década Chaves e seus amigos: Chiquinha, Quico, Seu madruga e toda a turma da vizinhança, aprontam as maiores confusões e encantam crianças e adultos em histórias cheias de alegria, pureza e muita diversão para toda a família!',
+	2, current_timestamp, 1974, 0)
+
+insert into serie (id, title, cover, storyline, detail, category_id, created_at, release, serie_id)
+values (5, 'CHAVES',
+	'/medias/cover/cover_chaves.png',
+	'Há década Chaves e seus amigos: Chiquinha, Quico, Seu madruga e toda a turma da vizinhança, aprontam as maiores confusões e encantam crianças e adultos em histórias cheias de alegria, pureza e muita diversão para toda a família!',
+	'Há década Chaves e seus amigos: Chiquinha, Quico, Seu madruga e toda a turma da vizinhança, aprontam as maiores confusões e encantam crianças e adultos em histórias cheias de alegria, pureza e muita diversão para toda a família!',
+	2, current_timestamp, 1974, 3)
+
+insert into serie (id, title, cover, banner, storyline, detail, category_id, created_at, release, serie_id)
+values (4, 'Eu, a Patroa e as Crianças',
+	'/medias/cover/cover_euapatroaeascriancas.png',
+	'/medias/banner/banner_euapatroaeascriancas.png',
+	'Michael Kyle é um homem carinhoso, casado com Jay Kyle, uma mulher bonita e próspera, e pai de três crianças saudáveis. Típica família feliz? Não para Michael. Ele gostaria que toda sua família tivesse um comportamento diferente!',
+	'Michael Kyle é um homem carinhoso, casado com Jay Kyle, uma mulher bonita e próspera, e pai de três crianças saudáveis. Típica família feliz? Não para Michael. Ele gostaria que toda sua família tivesse um comportamento diferente!',
+	2, current_timestamp, 2001, 0)
+
+insert into serie (id, title, cover, banner, storyline, detail, category_id, created_at, release, serie_id)
+values (6, 'Eu, a Patroa e as Crianças',
+	'/medias/cover/cover_euapatroaeascriancas.png',
+	'/medias/banner/banner_euapatroaeascriancas.png',
+	'Michael Kyle é um homem carinhoso, casado com Jay Kyle, uma mulher bonita e próspera, e pai de três crianças saudáveis. Típica família feliz? Não para Michael. Ele gostaria que toda sua família tivesse um comportamento diferente!',
+	'Michael Kyle é um homem carinhoso, casado com Jay Kyle, uma mulher bonita e próspera, e pai de três crianças saudáveis. Típica família feliz? Não para Michael. Ele gostaria que toda sua família tivesse um comportamento diferente!',
+	2, current_timestamp, 2001, 4)
+
+delete from media where id = 30
+
+insert into media (id, title, url, cover, banner, storyline, detail, created_at, classification, type, category_id, release, duration, serie_id)
+values (28, 'Pilot',
+	'/medias/movie/euapatroaeascriacas_pilot.mp4',
+	'/medias/cover/cover_euaapatroaescriancas_pilot.png',
+	'/medias/banner/banner_euapatroaeascriancas.png',
+	'Michael e Jay são casados e têm três filhos. Uma garota pequena que fala espanhol chamada Kady, uma pré-adolescente que gosta de se maquear e pentear para os meninos, chamada Claire, e um filho adolescente que gosta de rap, chamado Jr. Kyle...',
+	'-',
+	current_timestamp,
+	'12', 1, 5, 2001, '40min', 6)
+
+insert into media (id, title, url, cover, banner, storyline, detail, created_at, classification, type, category_id, release, duration, serie_id)
+values (29, 'A verdade dói',
+	'/medias/movie/euapatroaeascriacas_averdadedoi.mp4',
+	'/medias/cover/cover_euaapatroaescriancas_averdadedoi.png',
+	'/medias/banner/banner_euapatroaeascriancas.png',
+	'Júnior faz uma tatuagem, para o desgosto de Michael e Jay. Além disso, Kady quer ir dormir na casa de umas amigas, mas Michael recusa. Assim começam várias discussões na casa.',
+	'-',
+	current_timestamp,
+	'12', 1, 5, 2001, '40min', 6)
+
+insert into media (id, title, url, cover, banner, storyline, detail, created_at, classification, type, category_id, release, duration, serie_id)
+values (30, 'O apego à tralhas',
+	'/medias/movie/euapatroaeascriacas_oapegoatralhas.mp4',
+	'/medias/cover/cover_euaapatroaescriancas_oapegoatralhas.png',
+	'/medias/banner/banner_euapatroaeascriancas.png',
+	'Jay está tentando se desfazer de algumas roupas velhas, contra a vontade de Michael. Eles acabam combinando que tudo que não for usado durante a semana será jogado fora. Durante toda a semana eles vestem roupas fora de moda (Michael Jackson, Flashdance, Madonna, etc.).',
+	'Enquanto isso, Júnior está tentando aprender a tocar guitarra e seu amigo o convence a fumar maconha. Quando Michael e Jay descobrem, eles decidem dar uma lição brincando com suas mentes. Júnior fica apavorado e jura que nunca mais fará isso. Kady fica brava por Claire a evitar.',
+	current_timestamp,
+	'12', 1, 5, 2001, '40min', 6)

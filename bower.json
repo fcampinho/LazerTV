@@ -1,0 +1,9 @@
+{
+  "name": "lazertv",
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "bootstrap": "^3.3.6",
+    "magnific-popup": "^1.1.0",
+    "toastr": "^2.1.2"
+  }
+}
